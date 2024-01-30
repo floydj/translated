@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  db:
+    image: "mysql:8.0.22"
+    container_name: "mysql-translated"
+    ports:
+      - "3312:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+    volumes:
+      - "./my.cnf:/etc/mysql/conf.d/my.cnf"
+      - mysqldata:/var/lib/mysql
+volumes:
+  mysqldata:
