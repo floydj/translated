@@ -8,4 +8,4 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-ActiveRecord::Base.connection.execute("insert into translations (locale, translations.key, value, created_at, updated_at) values ('en', 'percentage_neat_oil', '% Neat Oil', '2024-01-30', '2024-01-30')")
+ActiveRecord::Base.connection.execute("insert into translations (locale, translations.key, value, created_at, updated_at) values ('en', 'percentage_neat_oil', '--- \"% Neat Oil\"\n', '2024-01-30', '2024-01-30')")
